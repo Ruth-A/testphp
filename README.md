@@ -13,7 +13,7 @@ https://github.com/adminko/testphp
 2. Импортировать MySQL дамп `testphp_db.sql`
 3. Настроить доключение к базе данных в config/db_params.php
 
-## Тезническое описание
+## Техническое описание
 1. index - точка входа
 
 2. components/Autoload - автозагрузка классов
