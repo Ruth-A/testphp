@@ -10,7 +10,7 @@
 
     <!-- Chosen CSS -->
     <!--<link rel="stylesheet" href="/plugins/chosen/docsupport/style.css">-->
-    <link rel="stylesheet" href="/plugins/chosen/chosen.css">
+    <link rel="stylesheet" href="/public/plugins/chosen/chosen.css">
 
   </head>
   <body>
@@ -46,8 +46,9 @@
                                 <input type="email" name="email" class="form-control" id="email" placeholder="email">
                             </div>
 
+                            <label>Адрес</label>
+
                             <div class="form-group" id="group-region">
-                                <label for="region">Регион</label>
 
                                 <select id="region" data-placeholder="Выбирите область" class="chosen-select" tabindex="1" style="width:100%;">
                                     <option value=""></option>
@@ -58,15 +59,13 @@
                             </div>
 
                             <div class="form-group" id="group-city">
-                                <label for="city">Город</label>
 
-                                <select id="city" data-placeholder="Выбирите город" class="chosen-select" tabindex="2" style="width:100%;">
+                                <select id="city" name="address" data-placeholder="Выбирите город" class="chosen-select" tabindex="2" style="width:100%;">
                                     <option value=""></option>
                                 </select>
                             </div>
 
                             <div class="form-group" id="group-district">
-                                <label for="district">Район</label>
 
                                 <select name="address" id="district" data-placeholder="Выбирите район" class="chosen-select" tabindex="3" style="width:100%;">
                                     <option value=""></option>
