@@ -13,5 +13,5 @@
 
     <nav class="nav justify-content-center">
         <a class="nav-link" href="/">Список пользователей</a>
-        <a class="nav-link" href="registration">Регистрация</a>
+        <a class="nav-link" href="/registration">Регистрация</a>
     </nav>
