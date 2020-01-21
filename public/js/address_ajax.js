@@ -13,6 +13,9 @@ $(document).ready(function(){
   // Обновить варианты выбора адреса
   function updateOptions(selector, group, id) {
 
+    group.hide();
+    districtSelector.removeAttr("name");
+
     // Удалисть устаревшие варианты
     selector.children("option").remove();
     selector.append($('<option>', { value: '',}));
@@ -24,6 +27,8 @@ $(document).ready(function(){
       dataType: 'JSON',
       success: function(response){
 
+          console.log(response.length);
+
           for(let i=0; i<response.length; i++){
   
               let option = "<option " +
@@ -33,16 +38,16 @@ $(document).ready(function(){
   
               selector.append(option);
           }
-  
+          
+            selector.chosen({ width: '100%' });
+            selector.trigger("chosen:updated");
+
+            if (response.length>0) {
+              selector.attr("name", "address");
+              group.show();
+            }
       }
     });
-
-    // Обновить интерфейс выбора
-    setTimeout(function () {
-      selector.chosen({ width: '100%' });
-      selector.trigger("chosen:updated");
-      group.show();
-    }, 300);
   }
 
   // Обработчик события измения выбора региона
